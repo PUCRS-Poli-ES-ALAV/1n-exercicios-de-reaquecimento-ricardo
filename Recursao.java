@@ -24,6 +24,13 @@ public class Recursao {
         return inverterString(str.substring(1)) + str.charAt(0);
     }
 
+    // v
+    public static int sequenciaF(int n) {
+        if (n == 1){return 1;}
+        if (n == 2){return 2;}
+        return 2 * sequenciaF(n - 1) + 3 * sequenciaF(n - 2);
+    }    
+
     public static void main(String[] args) {
         int a = 6, b = 4;
         System.out.println(a + "x" + b + ": " + multiplicacao(a, b));
@@ -36,5 +43,8 @@ public class Recursao {
 
         String str = "exemplo";
         System.out.println("Inversão da string '" + str + "': " + inverterString(str));
+
+        int num = 5;
+        System.out.println("Sequência F(" + num + "): " + sequenciaF(num));
     }
 }
