@@ -18,6 +18,12 @@ public class Recursao {
         return 1.0 / n + somaHarmonica(n - 1);
     }
 
+    // iv
+    public static String inverterString(String str) {
+        if (str.isEmpty()){return str;}
+        return inverterString(str.substring(1)) + str.charAt(0);
+    }
+
     public static void main(String[] args) {
         int a = 6, b = 4;
         System.out.println(a + "x" + b + ": " + multiplicacao(a, b));
@@ -27,5 +33,8 @@ public class Recursao {
 
         int n = 6;
         System.out.println("Soma Harmônica de " + n + ": " + somaHarmonica(n));
+
+        String str = "exemplo";
+        System.out.println("Inversão da string '" + str + "': " + inverterString(str));
     }
 }
